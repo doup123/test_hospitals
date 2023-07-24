@@ -13,11 +13,8 @@ To use the hospital network testing tool, follow these steps:
 1. Clone this repository to your local machine.
 
 1. Ensure you have a CSV file containing hospital information, including tags, access, carrier, access interface, VLAN, ASN, LIR prefix, PtP1, and PtP2. The CSV file should be formatted with the delimiter ';' and have a header row with the column names. An example CSV file named "HOSPITALS.csv" is provided in the repository. 
-1.The CSV file should be created by the last sheet of excel file: https://grnethq-my.sharepoint.com/:x:/g/personal/alioumis_noc_grnet_gr/EatRBpIG2uhCm-ucBJKarqoBJm1V4FyLDzj1BPFB2xSzXA?e=9CU99w. Download the excel file and save as csv the last sheet (Hospitals_Auto_Checks) as HOSPITALS.csv.
+The CSV file should be created by the last sheet of excel file: https://grnethq-my.sharepoint.com/:x:/g/personal/alioumis_noc_grnet_gr/EatRBpIG2uhCm-ucBJKarqoBJm1V4FyLDzj1BPFB2xSzXA?e=9CU99w. Download the excel file and save as csv the last sheet (Hospitals_Auto_Checks) as HOSPITALS.csv.
 1. Update the "group.yaml" file with your device connection details (username).
-1. Open a terminal or command prompt, navigate to the repository's directory, and run the Python script "hospital_testing_tool.py" with the appropriate arguments:  
-  python hospital_testing_tool.py --hospital_tag <hospital_tag> e.g. python hospital_testing_tool.py --hospital_tag BENAK
-
 
 **Script Overview**
 
