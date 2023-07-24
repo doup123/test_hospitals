@@ -59,6 +59,7 @@ The script performs the following network tests on each hospital (or a specific 
 Please note that the script uses the hospital's specific configuration details (from the CSV file) to perform the tests.
 
 (nornir-venv) ➜  hospitals_check git:(main) ✗ python3 hospitals_check.py --hospital_tag BENAK
+    
     /Users/mdimolianis/hospitals_check/nornir-venv/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated
     "class": algorithms.Blowfish,
     BENAK
