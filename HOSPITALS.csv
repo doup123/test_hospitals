@@ -1,0 +1,100 @@
+﻿Carrier/Switch;Interface;L3_Termination_Point;Vlans;TAG;ASN;LIR Prefix;PtP1 (eier);PtP2 (kolettir)
+eie2-asw.grnet.gr;xe-0/0/3;eie.grnet.gr;100;BENAK;64900;194.177.198.152/29;62.217.77.172/31;0
+eie2-asw.grnet.gr;xe-0/0/4;eie.grnet.gr;101;LAIKO;64901;195.130.89.120/29;62.217.77.176/31;0
+dimokritos2.grnet.gr;0;dimokritos2.grnet.gr;100;GNAGENIM;64902;195.130.89.96/29;62.217.77.180/31;0
+eie2-asw.grnet.gr;xe-0/0/5;eie.grnet.gr;102;IPPOKRATH;64903;194.177.198.240/29;62.217.77.90/31;0
+dimokritos2.grnet.gr;0;dimokritos2.grnet.gr;100;SOTIRIA;64904;83.212.248.144/29;62.217.77.184/31;0
+ypepth-asw.grnet.gr;xe-0/0/3;ype.grnet.gr;100;GNASISMAN;64905;195.251.59.0/29;62.217.77.188/31;0
+ypepth-asw.grnet.gr;xe-0/0/4;ype.grnet.gr;101;KONST;64906;195.251.59.8/29;62.217.77.192/31;0
+ ;0;eie.grnet.gr;0;PAMMAK;64907;195.251.118.128/29;62.217.77.196/31;0
+ypepth-asw.grnet.gr;xe-0/0/5;ype.grnet.gr;102;KAT;64908;195.251.118.136/29;62.217.77.200/31;0
+niarchos-asw.grnet.gr;xe-0/0/3;koletti.grnet.gr;100;ASKL;64909;195.251.118.144/29;62.217.77.204/31;0
+eie2-asw.grnet.gr;xe-0/0/6;eie.grnet.gr;103;ALEXAN;64910;195.251.118.152/29;62.217.77.208/31;0
+eie2-asw.grnet.gr;xe-0/0/7;eie.grnet.gr;104;VENIZ;64911;195.251.118.160/29;62.217.77.212/31;0
+eie2-asw.grnet.gr;xe-0/0/8;eie.grnet.gr;105;AGSOFIA;65146;195.130.89.48/28;62.217.101.64/31;62.217.101.66/31
+eie2-asw.grnet.gr;xe-0/0/9;eie.grnet.gr;106;AGLAIA;65147;195.130.89.40/29 ;62.217.101.68/31;62.217.101.70/31
+eie2-asw.grnet.gr;xe-0/0/10;eie.grnet.gr;107;AGSAVVAS;65145;195.130.89.32/29 ;62.217.101.60/31;62.217.101.62/31
+niarchos-asw.grnet.gr;xe-0/0/4;koletti.grnet.gr;101;TZAN;64912;195.251.118.168/29;62.217.77.216/31;0
+niarchos-asw.grnet.gr;xe-0/0/5;koletti.grnet.gr;102;AGPANT;64913;195.251.118.176/29;62.217.77.220/31;0
+niarchos-asw.grnet.gr;xe-0/0/6;koletti.grnet.gr;103;THRIASIO;65015;195.130.89.112/29;62.217.101.232/31;62.217.101.234/31
+niarchos-asw.grnet.gr;xe-0/0/7;koletti.grnet.gr;104;METAXA;64914;195.251.118.184/29;62.217.77.224/31;0
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;PAPAN;64915;195.251.118.192/29;62.217.77.228/31;0
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;PAPAGHOSP;65170;195.130.89.104/29;62.217.101.250/31;62.217.101.248/31
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;AGDIMITR;64917;195.251.118.200/29;62.217.77.232/31;0
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;AHEPA;64918;195.251.118.208/29;62.217.77.236/31;0
+thessaloniki.grnet.gr;0;thessaloniki.grnet.gr;0;THEAG;64919;195.251.118.216/29;62.217.77.240/31;0
+lamia.grnet.gr;0;0;0;GNSLAM;64920;195.251.118.224/29;62.217.77.244/31;0
+ ;0;eie.grnet.gr;0;ELPIS;64921;195.251.118.232/29;62.217.77.248/31;0
+TBD;0;0;0;GONKAGANARG;65144;195.130.89.24/29 ;62.217.101.56/31;62.217.101.58/31
+eie2-asw.grnet.gr;ge-0/0/11;eie.grnet.gr;108;SYGGR;64922;195.251.118.240/29;62.217.77.252/31;0
+eie2-asw.grnet.gr;ge-0/0/12;eie.grnet.gr;109;GNEVOFTHALM;64923;195.251.118.248/29;62.217.98.24/31;0
+thessaloniki.grnet.gr;0;thessaloniki.grnet.gr;0;GNTHESAGDIMITR;64924;83.212.8.0/29;62.217.98.178/31;0
+ ;0;0;0;GNKASTORIA;64925;83.212.8.8/29;62.217.99.64/31;0
+edessa.grnet.gr;0;edessa.grnet.gr;0;GNPEDESSA;64926;83.212.8.16/29;62.217.101.236/31;0
+florina.grnet.gr;0;florina.grnet.gr;0;GNFLOR;64927;83.212.8.24/29;83.212.176.0/31;0
+grevena.grnet.gr;0;grevena.grnet.gr;0;GNGREV;64928;83.212.8.32/29;83.212.176.4/31;0
+kozani.grnet.gr;0;kozani.grnet.gr;0;MAMATS;64929;83.212.8.40/29;83.212.176.8/31;0
+thessaloniki.grnet.gr;0;thessaloniki.grnet.gr;0;GNTHESAGPAVL;64930;83.212.8.48/29;83.212.176.12/31;0
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;IPPOKRTHES;64931;194.177.198.248/29;62.217.77.98/31;0
+serres.grnet.gr;0;serres.grnet.gr;0;GNSERRES;64932;83.212.8.56/29;83.212.176.16/31;0
+chalkida.grnet.gr;0;chalkida.grnet.gr;0;GNHALKIDA;64933;83.212.8.64/29;83.212.176.20/31;0
+eie2-asw.grnet.gr;ge-0/0/13;eie.grnet.gr;110;GNEVPOLYKL;64934;83.212.8.72/29;83.212.176.24/31;0
+eie2-asw.grnet.gr;ge-0/0/14;eie.grnet.gr;111;AGELENI;64935;83.212.8.80/29;83.212.176.28/31;0
+ypepth-asw.grnet.gr;xe-0/0/6;ype.grnet.gr;103;GNASISMAN2;64936;83.212.8.88/29;83.212.176.32/31;0
+ypepth-asw.grnet.gr;ge-0/0/7;ype.grnet.gr;104;PAIDONPENT;64937;83.212.8.96/29;83.212.176.36/31;0
+TBD;0;0;0;EKA;64938;83.212.8.104/29;83.212.176.40/31;0
+naxos.grnet.gr;0;naxos.grnet.gr;0;GNNAXOS;64939;83.212.8.112/29;83.212.176.44/31;0
+niarchos-asw.grnet.gr;ge-0/0/8;koletti.grnet.gr;105;DROMOK;64940;83.212.8.120/29;83.212.176.48/31;0
+niarchos-asw.grnet.gr;xe-0/0/9;koletti.grnet.gr;106;PSNA;64941;83.212.8.128/29;83.212.176.52/31;0
+niarchos-asw.grnet.gr;xe-0/0/10;koletti.grnet.gr;107;ONASIO;64942;83.212.8.136/29;83.212.176.56/31;0
+niarchos-asw.grnet.gr;xe-0/0/11;koletti.grnet.gr;108;GNNAGVARV;64943;83.212.8.144/29;83.212.176.60/31;0
+auth-asw.grnet.gr;0;thessaloniki.grnet.gr;0;GNTHESPSYX;64944;83.212.8.152/29;83.212.176.64/31;0
+katerini.grnet.gr;0;katerini.grnet.gr;0;GNKATER;64945;83.212.8.160/29;83.212.176.68/31;0
+veroia.grnet.gr;0;veroia.grnet.gr;0;GNIVERIA;64946;83.212.8.168/29;83.212.176.72/31;0
+naousa.grnet.gr;0;naousa.grnet.gr;0;GNINAOUSA;64947;83.212.8.176/29;83.212.176.76/31;0
+ptolemaida.grnet.gr;0;ptolemaida.grnet.gr;0;MAMATSPTOL;64948;83.212.8.184/29;83.212.176.80/31;0
+kilkis.grnet.gr;0;kilkis.grnet.gr;0;GNKILKIS;64949;83.212.8.192/29;83.212.176.84/31;0
+polygyros.grnet.gr;0;polygyros.grnet.gr;0;GNHALK;64950;83.212.8.200/29;83.212.176.88/31;0
+didimoteicho.grnet.gr;0;didimoteicho.grnet.gr;0;PGNEVROU;64951;83.212.8.208/29;83.212.176.92/31;0
+amfissa.grnet.gr;0;amfissa.grnet.gr;0;GNAMFISSA;64952;83.212.8.216/29;83.212.176.96/31;0
+thiva.grnet.gr;0;thiva.grnet.gr;0;GNLTHIV;64953;83.212.8.224/29;83.212.176.100/31;0
+livadeia.grnet.gr;0;livadeia.grnet.gr;0;GNLIV;64954;83.212.8.232/29;83.212.176.104/31;0
+argos.grnet.gr;0;argos.grnet.gr;0;GNARGOS;64955;83.212.8.240/29;83.212.176.108/31;0
+naflpio.grnet.gr;0;naflpio.grnet.gr;0;GNALAFPLIO;64956;83.212.8.248/29;83.212.176.112/31;0
+sparti.grnet.gr;0;sparti.grnet.gr;0;GNSPA;65158;195.130.89.96/29 ;0;0
+kefallonia.grnet.gr;0;kefallonia.grnet.gr;0;GNKEF;64957;194.177.198.0/29;83.212.176.116/31;0
+lefkada.grnet.gr;0;lefkada.grnet.gr;0;GNLEFKADA;64958;194.177.198.8/29;83.212.176.120/31;0
+preveza.grnet.gr;0;preveza.grnet.gr;0;GNPREV;64959;194.177.198.16/29;83.212.176.124/31;0
+aigio.grnet.gr;0;aigio.grnet.gr;0;GNACHAIG;64960;194.177.198.24/29;83.212.176.128/31;0
+pyrgos.grnet.gr;0;pyrgos.grnet.gr;0;GNILPYRG;64961;194.177.198.32/29;83.212.176.132/31;0
+agnikolaos.grnet.gr;0;agnikolaos.grnet.gr;0;GNLAGNIKOL;64962;194.177.198.40/29;83.212.176.136/31;0
+ierapetra.grnet.gr;0;ierapetra.grnet.gr;0;GNLIERAP;64963;194.177.198.48/29;83.212.176.140/31;0
+TBD;0;0;0;EKEA;65076;83.212.248.0/27 ;62.217.97.184/30;0
+eie2-asw.grnet.gr;ge-0/0/15;eie.grnet.gr;112;MINHEALTH;64964;194.177.198.56/29;83.212.176.144/31;0
+eie2-asw.grnet.gr;ge-0/0/16;eie.grnet.gr;113;MINHEALTH2;64964;194.177.198.64/29;83.212.176.148/31;0
+0;0;0;0;FIL;64965;194.177.198.72/29;83.212.176.152/31;0
+0;0;0;0;IKARIA;64966;194.177.198.80/29;83.212.176.156/31;0
+0;0;0;0;KITH;64967;194.177.198.88/29;83.212.176.160/31;0
+0;0;0;0;LIXOURI;64968;194.177.198.96/29;83.212.176.164/31;0
+0;0;0;0;KALAVR;64969;194.177.198.104/29;83.212.176.168/31;0
+0;0;0;0;AMALIADA;64970;194.177.198.112/29;83.212.176.172/31;0
+0;0;0;0;KRESTENA;64971;194.177.198.120/29;83.212.176.176/31;0
+0;0;0;0;THIRA;64972;194.177.198.128/29;83.212.176.180/31;0
+0;0;0;0;KARPEN;64973;194.177.198.136/29;83.212.176.184/31;0
+0;0;0;0;GOYMEN;64974;194.177.198.144/29;83.212.176.188/31;0
+0;0;0;0;GNSPA;65158;195.130.88.120/29;62.217.77.44/31;62.217.77.68/31
+0;0;0;0;SITIA;64976;194.177.198.160/29;83.212.176.196/31;0
+0;0;0;0;KYPAR;64977;194.177.198.168/29;83.212.176.200/31;0
+0;0;0;0;GIANNITSA;64978;194.177.198.176/29;83.212.176.204/31;0
+0;0;0;0;KALYMNO;64979;194.177.198.184/29;83.212.176.208/31;0
+0;0;0;0;IPPOKRKO;64980;194.177.198.192/29;83.212.176.212/31;0
+0;0;0;0;AGPANTSAM;64981;194.177.198.200/29;83.212.176.216/31;0
+0;0;0;0;KARYSTOS;64982;194.177.198.208/29;83.212.176.220/31;0
+0;0;0;0;KYMI;64983;194.177.198.216/29;83.212.176.224/31;0
+0;0;0;0;NEAPOLI;64983;194.177.198.224/29;83.212.176.228/31;0
+0;0;0;0;LEROS;64985;194.177.198.232/29;83.212.176.232/31;0
+0;0;0;0;EVAG;65006;195.251.97.0/27;62.217.96.44/30;62.217.99.176/30
+0;0;0;0;IPPOKR;65064;83.212.233.160/27;62.217.97.150/31 (kolettir);62.217.97.148/31
+0;0;0;0;GNROD;65129;195.130.89.0/29;62.217.99.126/31;-
+0;0;0;0;GNSYR;65128;195.130.88.248/29 195.130.89.80/29;62.217.99.152/30;62.217.99.156/30
+0;0;0;0;_______;65098;83.212.233.64/27;62.217.98.152/31, 62.217.101.192/31;62.217.98.154/31
