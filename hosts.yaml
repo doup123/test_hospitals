@@ -1,0 +1,78 @@
+---
+eie2-asw.grnet.gr:
+  hostname: eie2-asw.grnet.gr
+  groups:
+    - junos
+
+dimokritos2.grnet.gr:
+  hostname: dimokritos2.grnet.gr
+  groups:
+    - junos
+
+ypepth-asw.grnet.gr:
+  hostname: yepth-asw.grnet.gr
+  groups:
+    - junos
+
+niarchos-asw.grnet.gr:
+  hostname: niarchos-asw.grnet.gr
+  groups:
+    - junos
+
+auth-asw.grnet.gr:
+  hostname: auth-asw.grnet.gr
+  groups:
+    - junos
+
+thessaloniki.grnet.gr:
+  hostname: thessaloniki.grnet.gr
+  groups:
+    - junos
+
+lamia.grnet.gr:
+  hostname: lamia.grnet.gr
+  groups:
+    - junos
+
+edessa.grnet.gr:
+  hostname: edessa.grnet.gr
+  groups:
+    - junos
+
+florina.grnet.gr:
+  hostname: florina.grnet.gr
+  groups:
+    - junos
+
+grevena.grnet.gr:
+  hostname: grevena.grnet.gr
+  groups:
+    - junos
+
+kozani.grnet.gr:
+  hostname: kozani.grnet.gr
+  groups:
+    - junos
+
+serres.grnet.gr:
+  hostname: serres.grnet.gr
+  groups:
+    - junos
+
+eier.grnet.gr:
+  hostname: eier.grnet.gr
+  groups:
+    - junos
+kolettir.grnet.gr:
+  hostname: kolettir.grnet.gr
+  groups:
+    - junos
+
+eie.grnet.gr:
+  hostname: eie.grnet.gr
+  groups:
+    - junos
+koletti.grnet.gr:
+  hostname: koletti.grnet.gr
+  groups:
+    - junos

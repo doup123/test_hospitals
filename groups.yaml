@@ -1,0 +1,5 @@
+---
+junos:
+    platform: junos
+    username: mdimolianis
+    port: 22
