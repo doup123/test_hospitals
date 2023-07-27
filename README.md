@@ -13,11 +13,8 @@ To use the hospital network testing tool, follow these steps:
 1. Clone this repository to your local machine.
 
 1. Ensure you have a CSV file containing hospital information, including tags, access, carrier, access interface, VLAN, ASN, LIR prefix, PtP1, and PtP2. The CSV file should be formatted with the delimiter ';' and have a header row with the column names. An example CSV file named "HOSPITALS.csv" is provided in the repository. 
-1.The CSV file should be created by the last sheet of excel file: https://grnethq-my.sharepoint.com/:x:/g/personal/alioumis_noc_grnet_gr/EatRBpIG2uhCm-ucBJKarqoBJm1V4FyLDzj1BPFB2xSzXA?e=9CU99w. 
+The CSV file should be created by the last sheet of excel file: https://grnethq-my.sharepoint.com/:x:/g/personal/alioumis_noc_grnet_gr/EatRBpIG2uhCm-ucBJKarqoBJm1V4FyLDzj1BPFB2xSzXA?e=9CU99w. Download the excel file and save as csv the last sheet (Hospitals_Auto_Checks) as HOSPITALS.csv.
 1. Update the "group.yaml" file with your device connection details (username).
-1. Open a terminal or command prompt, navigate to the repository's directory, and run the Python script "hospital_testing_tool.py" with the appropriate arguments:  
-  python hospital_testing_tool.py --hospital_tag <hospital_tag> e.g. python hospital_testing_tool.py --hospital_tag BENAK
-
 
 **Script Overview**
 
@@ -57,3 +54,21 @@ The script performs the following network tests on each hospital (or a specific 
     BGP Neighbor Test: Checks the BGP status with the PtP1 (eier) address, received and sent prefixes.
 
 Please note that the script uses the hospital's specific configuration details (from the CSV file) to perform the tests.
+
+**Example output** 
+
+(nornir-venv) ➜  hospitals_check git:(main) ✗ python3 hospitals_check.py --hospital_tag BENAK
+    
+    /Users/mdimolianis/hospitals_check/nornir-venv/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated
+    "class": algorithms.Blowfish,
+    BENAK
+    ----------Physical-connectivity----------
+    Physical interface xe-0/0/3 of eie2-asw.grnet.gr is UP
+    ----------Optical-levels----------
+    {'physical_channels': {'channel': [{'index': 0, 'state': {'input_power': {'instant': -12.13, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'output_power': {'instant': -2.06, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'laser_bias_current': {'instant': 31.742, 'avg': 0.0, 'max': 0.0, 'min': 0.0}}}]}}
+    ----------PING----------
+    Ping to p2p 62.217.77.173 OK
+    ----------BGP----------
+    BGP with 62.217.77.173 is up
+    We do not receive any IP prefix and we should
+    We announce IP prefix
