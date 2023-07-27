@@ -6,13 +6,16 @@ from jinja2 import Environment, FileSystemLoader
 import pandas as pd
 import argparse
 import ipaddress
-
+from download_hospitals_info import download_file
 separator="----------"
 def main():
     #Initialize nornir configuration files -> groups,hosts etc
     args = args_parser()
-    #hospital = create_hospital_object_from_csv("HOSPITALS.csv","BENAK")
-    hospital = create_hospital_object_from_csv("HOSPITALS.csv",args.hospital_tag)
+    print("Downloading recent HOSPITALS file from sharepoint")
+    url = "https://grnethq-my.sharepoint.com/:x:/g/personal/alioumis_noc_grnet_gr/EatRBpIG2uhCm-ucBJKarqoBJm1V4FyLDzj1BPFB2xSzXA?download=1"
+    output_file = "HOSPITALS.xlsx"
+    download_file(url, output_file)
+    hospital = create_hospital_object_from_xlsx(output_file,args.hospital_tag)
 
     #Here we define the logic of the tests:
     print(hospital.tag)
@@ -43,8 +46,6 @@ class Hospital():
         self.lir_prefix = lir_prefix
         self.ptp1 = ptp1
         self.ptp2 = ptp2
-        self.iprouter1 = "eier.grnet.gr"
-        self.iprouter2 = "kolettir.grnet.gr"
         self.nr =InitNornir(config_file="config.yaml")
         self.routing_instance ="hospitals-1050"
 
@@ -140,8 +141,8 @@ class Hospital():
         attributes_result = get_attributes[device_name][1].result[getter]
         return attributes_result
 
-def create_hospital_object_from_csv(csv_file, tag=None):
-    df = pd.read_csv(csv_file, delimiter=';')
+def create_hospital_object_from_xlsx(xls_file, tag=None):
+    df = pd.read_excel(xls_file, sheet_name="Hospitals_Auto_Checks")
 
     # If a specific tag is provided, create and return a single Hospital object
     if tag is not None:
@@ -153,27 +154,11 @@ def create_hospital_object_from_csv(csv_file, tag=None):
                             access_interface=row['Interface'].iloc[0].strip(),
                             vlan=int(row['Vlans'].iloc[0]),
                             asn=int(row['ASN'].iloc[0]),
-                            lir_prefix=row['LIR Prefix'].iloc[0].strip(),
-                            ptp1=row['PtP1 (eier)'].iloc[0].strip(),
-                            ptp2=row['PtP2 (kolettir)'].iloc[0].strip())
+                            lir_prefix=str(row['LIR Prefix'].iloc[0]).strip(),
+                            ptp1=str(row['PtP1 (eier)'].iloc[0]).strip(),
+                            ptp2=str(row['PtP2 (kolettir)'].iloc[0]).strip())
         else:
-            raise ValueError(f"No Hospital object found with tag '{tag}' in the CSV file.")
-
-    # If no tag is provided, create and return a list of all Hospital objects
-    hospitals = []
-    for index, row in df.iterrows():
-        hospital = Hospital(tag=row['TAG'].strip(),
-                            access=row['Carrier/Switch'].strip(),
-                            carrier=row['L3_Termination_Point'].strip(),
-                            access_interface=row['Interface'].strip(),
-                            vlan=int(row['Vlans']),
-                            asn=int(row['ASN']),
-                            lir_prefix=row['LIR Prefix'].strip(),
-                            ptp1=row['PtP1 (eier)'].strip(),
-                            ptp2=row['PtP2 (kolettir)'].strip())
-        hospitals.append(hospital)
-
-    return hospitals
+            raise ValueError(f"No Hospital object found with tag '{tag}' in the xlsx file.")
 
 if __name__ == "__main__":
     main()
