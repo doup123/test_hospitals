@@ -13,7 +13,7 @@ To use the hospital network testing tool, follow these steps:
 
 1. Clone this repository to your local machine.
 
-1. Update the "group.yaml" file with your device connection details (username).
+1. Update the "group.yaml" file with your device connection details (username) or provide username and password through the prompt. If you have a key that has access to the devices the password can be ignored.
 
 **Script Overview**
 
@@ -59,16 +59,18 @@ Please note that the script uses the hospital's specific configuration details t
 
 (nornir-venv) ➜  hospitals_check git:(main) ✗ python3 hospitals_check.py --hospital_tag BENAK
     
-    /Users/mdimolianis/hospitals_check/nornir-venv/lib/python3.8/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated
-    "class": algorithms.Blowfish,
+    Downloading recent HOSPITALS file from sharepoint
+    File downloaded successfully.
+    Enter your new username: mdimolianis
+    Enter your new password:
     BENAK
     ----------Physical-connectivity----------
     Physical interface xe-0/0/3 of eie2-asw.grnet.gr is UP
     ----------Optical-levels----------
-    {'physical_channels': {'channel': [{'index': 0, 'state': {'input_power': {'instant': -12.13, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'output_power': {'instant': -2.06, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'laser_bias_current': {'instant': 31.742, 'avg': 0.0, 'max': 0.0, 'min': 0.0}}}]}}
+    {'physical_channels': {'channel': [{'index': 0, 'state': {'input_power': {'instant': -12.15, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'output_power': {'instant': -2.06, 'avg': 0.0, 'max': 0.0, 'min': 0.0}, 'laser_bias_current': {'instant': 30.782, 'avg': 0.0, 'max': 0.0, 'min': 0.0}}}]}}
     ----------PING----------
     Ping to p2p 62.217.77.173 OK
     ----------BGP----------
     BGP with 62.217.77.173 is up
-    We do not receive any IP prefix and we should
+    We receive IP prefix
     We announce IP prefix
