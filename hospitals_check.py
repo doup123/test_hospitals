@@ -7,6 +7,10 @@ import pandas as pd
 import argparse
 import ipaddress
 from download_hospitals_info import download_file
+from getpass import getpass
+import yaml
+
+
 separator="----------"
 def main():
     #Initialize nornir configuration files -> groups,hosts etc
@@ -17,13 +21,21 @@ def main():
     download_file(url, output_file)
     hospital = create_hospital_object_from_xlsx(output_file,args.hospital_tag)
 
-    #Here we define the logic of the tests:
+    # Get the new credentials from the user
+    new_username, new_password = get_credentials()
+    hospital.username = new_username
+    hospital.password = new_password
+    # Here we define the logic of the tests:
     print(hospital.tag)
-    if (hospital.check_physical_port()):
-        print(hospital.check_diagnostics_optics())
-        if (hospital.check_ping()):
-            hospital.check_bgp_neighbors()
+    #L2 connectivity
 
+    if (hospital.check_physical_port()):
+        #Optical levels
+        print(hospital.check_diagnostics_optics())
+        #L3 connectivity
+        if (hospital.check_ping()):
+            #BGP
+            hospital.check_bgp_neighbors()
 
 def nornir_napalm_getter(task,getter):
     result = task.run(task=napalm_get, getters=[getter])
@@ -48,6 +60,8 @@ class Hospital():
         self.ptp2 = ptp2
         self.nr =InitNornir(config_file="config.yaml")
         self.routing_instance ="hospitals-1050"
+        self.username=''
+        self.password=''
 
         if self.access=="0" or self.carrier=="0" or self.access_interface=="0":
             exit("Problem with the values of the HOSPITAL "+self.tag+" in the source file")
@@ -101,6 +115,7 @@ class Hospital():
     def check_ping(self):
         self.nr = InitNornir(config_file="config.yaml")
         self.nr = self.nr.filter(hostname=self.carrier)
+        self.update_passwords()
         res = self.nr.run(task=napalm_ping, dest=self.ptp1_hospital)
         print(separator+"PING"+separator)
         if(res[self.carrier][0].result["success"]):
@@ -137,10 +152,15 @@ class Hospital():
     def retrieve_results_from_nornir(self,getter,device_name):
         self.nr = InitNornir(config_file="config.yaml")
         self.nr = self.nr.filter(hostname=device_name)
+        self.update_passwords()
         get_attributes = self.nr.run(task=nornir_napalm_getter, getter=getter)
         attributes_result = get_attributes[device_name][1].result[getter]
         return attributes_result
 
+    def update_passwords(self):
+        for hostname, host_obj in self.nr.inventory.hosts.items():
+            host_obj.username = self.username
+            host_obj.password = self.password
 def create_hospital_object_from_xlsx(xls_file, tag=None):
     df = pd.read_excel(xls_file, sheet_name="Hospitals_Auto_Checks")
 
@@ -159,6 +179,12 @@ def create_hospital_object_from_xlsx(xls_file, tag=None):
                             ptp2=str(row['PtP2 (kolettir)'].iloc[0]).strip())
         else:
             raise ValueError(f"No Hospital object found with tag '{tag}' in the xlsx file.")
+
+
+def get_credentials():
+    username = input("Enter your new username: ")
+    password = getpass("Enter your new password: ")
+    return username, password
 
 if __name__ == "__main__":
     main()
