@@ -1,4 +1,14 @@
 ---
+ype-asw.grnet.gr:
+  hostname: ype-asw.grnet.gr
+  groups:
+    - junos
+
+ype.grnet.gr:
+  hostname: ype.grnet.gr
+  groups:
+    - junos
+
 eie2-asw.grnet.gr:
   hostname: eie2-asw.grnet.gr
   groups:
