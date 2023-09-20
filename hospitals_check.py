@@ -102,7 +102,10 @@ class Hospital():
     def check_diagnostics_optics(self):
         print(separator+"Optical-levels"+separator)
         optics = self.retrieve_results_from_nornir("get_optics",self.access)
-        return (optics[self.access_interface])
+        if self.access_interface in optics.keys():
+            return (optics[self.access_interface])
+        else:
+            return("No optics available")
     def check_ping(self):
         pass
     def check_l3_interface(self):

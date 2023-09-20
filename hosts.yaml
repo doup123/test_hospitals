@@ -1,4 +1,9 @@
 ---
+ekea-asw.grnet.gr:
+  hostname: ekea-asw.grnet.gr
+  groups:
+    - junos
+
 ype-asw.grnet.gr:
   hostname: ype-asw.grnet.gr
   groups:
