@@ -1,4 +1,6 @@
 ---
+test.grnet.gr: 
+
 kastoria.grnet.gr:
   hostname: kastoria.grnet.gr
   groups:
