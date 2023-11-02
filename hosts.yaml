@@ -1,4 +1,14 @@
 ---
+kastoria.grnet.gr:
+  hostname: kastoria.grnet.gr
+  groups:
+    - junos
+
+serres.grnet.gr:
+  hostname: serres.grnet.gr
+  groups:
+    - junos
+
 ekea-asw.grnet.gr:
   hostname: ekea-asw.grnet.gr
   groups:
